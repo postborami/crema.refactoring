@@ -1,519 +1,489 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4689cc; -webkit-text-stroke: #4689cc}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #8cd3fe; -webkit-text-stroke: #8cd3fe}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #c27e65; -webkit-text-stroke: #c27e65}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #71c083; -webkit-text-stroke: #71c083}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca; min-height: 16.0px}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d7378; -webkit-text-stroke: #6d7378}
-    span.s1 {font-kerning: none; background-color: #171818}
-    span.s2 {font-kerning: none; color: #8cd3fe; background-color: #171818; -webkit-text-stroke: 0px #8cd3fe}
-    span.s3 {font-kerning: none; color: #6d6d6d; background-color: #171818; -webkit-text-stroke: 0px #6d6d6d}
-    span.s4 {font-kerning: none; color: #cacaca; background-color: #171818; -webkit-text-stroke: 0px #cacaca}
-    span.s5 {font-kerning: none; color: #c27e65; background-color: #171818; -webkit-text-stroke: 0px #c27e65}
-    span.s6 {font-kerning: none; color: #4689cc; background-color: #171818; -webkit-text-stroke: 0px #4689cc}
-    span.s7 {font-kerning: none; color: #b76ff7; background-color: #171818; -webkit-text-stroke: 0px #b76ff7}
-    span.s8 {font-kerning: none; color: #d4d4d4; background-color: #171818; -webkit-text-stroke: 0px #d4d4d4}
-    span.s9 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헬프센터 콘텐츠 변환 현황 대시보드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;</span><span class="s1">html</span><span class="s4"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s5">"ko"</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">헬프센터 콘텐츠 변환 현황 대시보드</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">link</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"</span><span class="s4"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s7">@import</span><span class="s4"> </span><span class="s5">url</span><span class="s8">(</span><span class="s1">'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap'</span><span class="s8">);</span></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s6">body</span><span class="s4"> </span><span class="s8">{</span><span class="s4"> </span><span class="s2">font-family:</span><span class="s4"> </span><span class="s1">'Noto Sans KR'</span><span class="s8">,</span><span class="s4"> </span><span class="s5">sans-serif</span><span class="s8">;</span><span class="s4"> </span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">details</span><span class="s1"> </span><span class="s8">&gt;</span><span class="s1"> </span><span class="s6">summary</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> </span><span class="s2">list-style:</span><span class="s1"> </span><span class="s5">none</span><span class="s8">;</span><span class="s1"> </span><span class="s8">}</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">details</span><span class="s4"> </span><span class="s8">&gt;</span><span class="s4"> </span><span class="s1">summary::-webkit-details-marker</span><span class="s4"> </span><span class="s8">{</span><span class="s4"> </span><span class="s2">display:</span><span class="s4"> </span><span class="s5">none</span><span class="s8">;</span><span class="s4"> </span><span class="s8">}</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;</span><span class="s6">body</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gray-50 text-gray-800"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10"</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Header --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mb-10 text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-bold text-gray-900 mb-2"</span><span class="s3">&gt;</span><span class="s4">📄 헬프센터 콘텐츠 변환 대시보드</span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-gray-600"</span><span class="s3">&gt;</span><span class="s1">기존 기술 문서를 고객 친화적인 가이드로 재구성한 현황판입니다.</span><span class="s3">&lt;</span><span class="s6">br</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400"</span><span class="s3">&gt;</span><span class="s1">*미리보기 아이콘 클릭 시 해당 HTML 파일로 이동합니다.</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Dashboard Table --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white shadow overflow-hidden sm:rounded-lg mb-16"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">table</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"min-w-full divide-y divide-gray-200"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">thead</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"bg-gray-100"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">th</span><span class="s4"> </span><span class="s2">scope</span><span class="s3">=</span><span class="s1">"col"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-1/4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>기존 문서 (Original)</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">th</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">th</span><span class="s4"> </span><span class="s2">scope</span><span class="s3">=</span><span class="s1">"col"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-1/4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>변환 후 문서 (Converted)</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">th</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">th</span><span class="s4"> </span><span class="s2">scope</span><span class="s3">=</span><span class="s1">"col"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-1/12"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>변환 프롬프트</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">th</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">th</span><span class="s4"> </span><span class="s2">scope</span><span class="s3">=</span><span class="s1">"col"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-1/3"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>변환 시 고려 사항 (Rationale)</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">th</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">th</span><span class="s4"> </span><span class="s2">scope</span><span class="s3">=</span><span class="s1">"col"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-1/12"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>미리보기</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">th</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">thead</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">tbody</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white divide-y divide-gray-200"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- 1. 숨김 리뷰 (v1.3 Re-converted) --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:bg-gray-50 transition-colors bg-green-50"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium text-gray-900"</span><span class="s3">&gt;</span><span class="s1">[리뷰] 고객이 등록한 리뷰가 안 보여요</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://help-review.cre.ma/hc/ko/articles/11371979197977"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-external-link-alt mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1"> 원문 보기</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-bold text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">🕵️ 고객이 작성한 리뷰가 갑자기 안 보여요, 왜 그런가요?</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400 mt-1"</span><span class="s3">&gt;</span><span class="s1">review_visibility_guide.html</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-top text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800"</span><span class="s3">&gt;</span><span class="s4">v1.3</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside text-sm text-gray-600 space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">어조 개선:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 딱딱한 '하십시오' 제거, '하세요' 체 적용</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">이미지 최적화:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 명확한 경로는 이미지를 생략하여 가독성 증대</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">'체크포인트' → </span><span class="s3">&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">'STEP'</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 용어 변경</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-middle text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"review_visibility_guide.html"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-indigo-600 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-file-code fa-2x"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- 2. 네이버페이 연동 (파생) v1.2 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:bg-gray-50 transition-colors bg-blue-50"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mb-2"</span><span class="s3">&gt;</span><span class="s4">파생 문서</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-start mt-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-gray-400 mr-1"</span><span class="s3">&gt;</span><span class="s1">↳</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-500"</span><span class="s3">&gt;</span><span class="s1">원본: [리뷰] 고객이 등록한 리뷰가 안 보여요</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://help-review.cre.ma/hc/ko/articles/11371979197977"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-600 hover:text-blue-800 mt-0.5 inline-block"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-link mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1">원본 링크</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-bold text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">🛍️ 네이버페이 리뷰가 쇼핑몰에 연동될 때 설정 방법 (카페24)</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400 mt-1"</span><span class="s3">&gt;</span><span class="s1">naverpay_integration_guide.html</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-top text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"</span><span class="s3">&gt;</span><span class="s4">v1.2</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside text-sm text-gray-600 space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">복잡한 외부 설정(카페24) 별도 분리</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">'구매평 노출안함' 해제 과정 상세화</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-middle text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"naverpay_integration_guide.html"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-indigo-600 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-file-code fa-2x"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- 3. 자동 숨김 기준 (파생) v1.2 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:bg-gray-50 transition-colors bg-blue-50"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mb-2"</span><span class="s3">&gt;</span><span class="s4">파생 문서</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-start mt-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-gray-400 mr-1"</span><span class="s3">&gt;</span><span class="s1">↳</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-500"</span><span class="s3">&gt;</span><span class="s1">원본: [리뷰] 고객이 등록한 리뷰가 안 보여요</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://help-review.cre.ma/hc/ko/articles/11371979197977"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-600 hover:text-blue-800 mt-0.5 inline-block"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-link mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1">원본 링크</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-bold text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">⚙️ 품절, 미진열, 이미지 없는 리뷰 자동 숨김 처리 기준</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400 mt-1"</span><span class="s3">&gt;</span><span class="s1">auto_hide_criteria_guide.html</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-top text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"</span><span class="s3">&gt;</span><span class="s4">v1.2</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside text-sm text-gray-600 space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">'품절/미진열'의 구체적 판단 기준 명시</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">옵션별 품절 시 노출 여부 등 상세 로직 설명</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-middle text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"auto_hide_criteria_guide.html"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-indigo-600 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-file-code fa-2x"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- 4. 쇼핑몰 간 연동 v1.2 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:bg-gray-50 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium text-gray-900"</span><span class="s3">&gt;</span><span class="s1">[리뷰] 쇼핑몰간 리뷰 연동에 대해 알고 싶어요</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://help-review.cre.ma/hc/ko/articles/9873488119833"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-external-link-alt mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1"> 원문 보기</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-bold text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">🤝 다른 쇼핑몰의 리뷰를 가져와서 보여줄 수 있나요?</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400 mt-1"</span><span class="s3">&gt;</span><span class="s1">review_linkage_guide.html</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-top text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"</span><span class="s3">&gt;</span><span class="s4">v1.2</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside text-sm text-gray-600 space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">비용/조건 등 제약 사항 구조화</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">심화 내용(매칭)은 추천 문서로 유도</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-middle text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"review_linkage_guide.html"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-indigo-600 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-file-code fa-2x"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- 5. 알림톡 발송 v1.2 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:bg-gray-50 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium text-gray-900"</span><span class="s3">&gt;</span><span class="s1">[리뷰] 리뷰 작성 유도 메시지를 알림톡으로 발송할 수 있나요?</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://help-review.cre.ma/hc/ko/articles/9872095799961"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-external-link-alt mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1"> 원문 보기</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-bold text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">💬 리뷰 작성 요청 메시지를 카카오 알림톡으로 보낼 수 있나요?</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400 mt-1"</span><span class="s3">&gt;</span><span class="s1">kakao_alimtalk_guide.html</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-top text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"</span><span class="s3">&gt;</span><span class="s4">v1.2</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside text-sm text-gray-600 space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">사전 준비(비즈니스 인증) 단계 명확화</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">무료 건수 소멸 주의사항 강조</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-middle text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"kakao_alimtalk_guide.html"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-indigo-600 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-file-code fa-2x"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- 6. 상품 간 연동 v1.2 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:bg-gray-50 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium text-gray-900"</span><span class="s3">&gt;</span><span class="s1">[리뷰] 상품간 리뷰 연동 방법 - 상품간 리뷰 연동하기</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://help-review.cre.ma/hc/ko/articles/13628677804697"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-external-link-alt mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1"> 원문 보기</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-bold text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">🔗 다른 상품의 리뷰를 함께 보여줄 수 있나요?</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400 mt-1"</span><span class="s3">&gt;</span><span class="s1">product_review_linkage.html</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-top text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"</span><span class="s3">&gt;</span><span class="s4">v1.2</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside text-sm text-gray-600 space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">세트/색상별 상품 등 활용 예시 강화</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">'리뷰 복사'와 중복 사용 금지 경고</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-middle text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"product_review_linkage.html"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-indigo-600 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-file-code fa-2x"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- 7. 리뷰 복사 v1.2 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:bg-gray-50 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium text-gray-900"</span><span class="s3">&gt;</span><span class="s1">[리뷰] 리뷰 복사</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://help-review.cre.ma/hc/ko/articles/13628985874713"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-external-link-alt mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1"> 원문 보기</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-bold text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">📝 기존 리뷰를 다른 상품으로 그대로 옮길 수 있나요?</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400 mt-1"</span><span class="s3">&gt;</span><span class="s1">review_copy_guide.html</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-top text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"</span><span class="s3">&gt;</span><span class="s4">v1.2</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside text-sm text-gray-600 space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">'리뷰 연동'과 개념 구분 명확화</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">품절/리뉴얼 등 활용 사례 제시</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-middle text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"review_copy_guide.html"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-indigo-600 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-file-code fa-2x"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- 8. 데이터 동기화 v1.2 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:bg-gray-50 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium text-gray-900"</span><span class="s3">&gt;</span><span class="s1">[리뷰] 크리마 데이터 동기화 방식</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://help-review.cre.ma/hc/ko/articles/9876342390553"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-external-link-alt mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1"> 원문 보기</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-bold text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">🔄 쇼핑몰의 데이터는 언제, 어떻게 크리마로 넘어오나요?</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400 mt-1"</span><span class="s3">&gt;</span><span class="s1">data_sync_guide.html</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-top text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"</span><span class="s3">&gt;</span><span class="s4">v1.2</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside text-sm text-gray-600 space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">데이터 저장소 변경(호스팅사→크리마) 안내</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">'리뷰 이관' 필요성 인지 유도</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-middle text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"data_sync_guide.html"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-indigo-600 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-file-code fa-2x"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- 9. 리뷰 이관 (파생) v1.2 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:bg-gray-50 transition-colors bg-blue-50"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mb-2"</span><span class="s3">&gt;</span><span class="s4">파생 문서</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-start mt-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-gray-400 mr-1"</span><span class="s3">&gt;</span><span class="s1">↳</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-500"</span><span class="s3">&gt;</span><span class="s1">원본: [리뷰] 크리마 데이터 동기화 방식</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://help-review.cre.ma/hc/ko/articles/9876342390553"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-600 hover:text-blue-800 mt-0.5 inline-block"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-link mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1">원본 링크</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-bold text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">📦 호스팅사로 리뷰 데이터를 이관하고 싶어요</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400 mt-1"</span><span class="s3">&gt;</span><span class="s1">review_migration_guide.html</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-top text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"</span><span class="s3">&gt;</span><span class="s4">v1.2</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside text-sm text-gray-600 space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">서비스 해지/이전 시 데이터 처리 방법 안내</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">비용/기간 등 사전 확인사항 정리</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-middle text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"review_migration_guide.html"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-indigo-600 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-file-code fa-2x"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- 10. 네이버페이 리뷰 가져오기 v1.2 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:bg-gray-50 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium text-gray-900"</span><span class="s3">&gt;</span><span class="s1">[리뷰] 네이버페이 리뷰를 크리마로 가지고 올 수 있나요?</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://help-review.cre.ma/hc/ko/articles/16403186695833"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-external-link-alt mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1"> 원문 보기</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-bold text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">🛒 네이버페이에서 작성된 리뷰를 크리마로 가져올 수 있나요?</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400 mt-1"</span><span class="s3">&gt;</span><span class="s1">naverpay_review_import.html</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-top text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"</span><span class="s3">&gt;</span><span class="s4">v1.2</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside text-sm text-gray-600 space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">'간접 연동' 원리 도식화 및 설명</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">필수 설정(구매평 연동) 체크 유도</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-middle text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"naverpay_review_import.html"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-indigo-600 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-file-code fa-2x"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- 11. 네이버쇼핑 개수 연동 v1.2 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">tr</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:bg-gray-50 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-medium text-gray-900"</span><span class="s3">&gt;</span><span class="s1">[리뷰] 크리마 리뷰와 네이버쇼핑 리뷰의 개수를 맞춰줄 수 있나요?</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://help-review.cre.ma/hc/ko/articles/13475627368729"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-external-link-alt mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1"> 원문 보기</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-bold text-indigo-700"</span><span class="s3">&gt;</span><span class="s1">📊 크리마 리뷰와 네이버쇼핑의 리뷰 개수가 서로 달라요</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-gray-400 mt-1"</span><span class="s3">&gt;</span><span class="s1">naver_shopping_sync_cafe24.html</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-top text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"</span><span class="s3">&gt;</span><span class="s4">v1.2</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-4 align-top"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside text-sm text-gray-600 space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">자동 연동 중단 및 '리뷰 이관' 대안 제시</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">신청 문구 템플릿 제공</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">td</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-6 py-4 align-middle text-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"naver_shopping_sync_cafe24.html"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-indigo-600 transition-colors"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-file-code fa-2x"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">td</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">tr</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">tbody</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">table</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Prompt Update Log Section --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"border-t border-gray-200 pt-10"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-bold text-gray-900 mb-6"</span><span class="s3">&gt;</span><span class="s4">📝 프롬프트 업데이트 로그</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"space-y-6"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Log Entry 4 (v1.3 Latest) --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white shadow sm:rounded-lg border border-gray-200 border-l-4 border-l-blue-600"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-5"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-bold text-blue-800"</span><span class="s3">&gt;</span><span class="s1">v1.3 이미지/링크 정책 및 어조 개선</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-gray-500 mt-1"</span><span class="s3">&gt;&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"far fa-clock mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1"> 2026-01-21 (최신)</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-blue-50 rounded-md p-4 mb-4 text-sm text-gray-700"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">이미지 최소화:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 경로 안내가 명확하면 이미지 생략 가능</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">어조 개선:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> "~십시오" 금지, "~요/~입니다" 사용 허용</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">링크 유지:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 원본 신청서 링크 및 문구 그대로 유지</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">details</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"group"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">summary</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center cursor-pointer text-sm font-medium text-gray-600 hover:text-blue-600 select-none"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"group-open:hidden"</span><span class="s3">&gt;&lt;</span><span class="s6">i</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"fas fa-chevron-right mr-2"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s1">수정된 프롬프트 코드 보기</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hidden group-open:inline"</span><span class="s3">&gt;&lt;</span><span class="s6">i</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fas fa-chevron-down mr-2"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s4">프롬프트 접기</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">summary</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-4 bg-gray-900 rounded-md p-4 overflow-x-auto"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">pre</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-green-400 font-mono whitespace-pre-wrap"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1">&amp;lt;!-- 이미지 정책 --&amp;gt;</span></p>
-<p class="p4"><span class="s1">&amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;이미지 생성 가이드 (New):&amp;lt;/strong&amp;gt; 기능 설정 경로가 명확하다면 이미지를 생략할 수 있습니다. 단, 이해를 돕기 위해 꼭 필요하다고 판단되는 경우에만 이미지 영역과 설명을 추가합니다.&amp;lt;/li&amp;gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p4"><span class="s1">&amp;lt;!-- 링크 정책 --&amp;gt;</span></p>
-<p class="p4"><span class="s1">&amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;신청서 링크 (New):&amp;lt;/strong&amp;gt; 원본 문서에 포함된 신청서 문구와 링크는 변경 없이 그대로 삽입합니다.&amp;lt;/li&amp;gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p4"><span class="s1">&amp;lt;!-- 톤앤매너 --&amp;gt;</span></p>
-<p class="p4"><span class="s1">&amp;lt;section id="tone-and-manner"&amp;gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">  </span>&amp;lt;h2&amp;gt;[작성 예시 톤앤매너]&amp;lt;/h2&amp;gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">  </span>&amp;lt;ul&amp;gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&amp;lt;li&amp;gt;"~입니다/합니다" 또는 "~세요/요" 체를 사용하여 전문적이면서도 자연스럽게 작성합니다.&amp;lt;/li&amp;gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;금지 표현:&amp;lt;/strong&amp;gt; 딱딱한 "~십시오" 체는 사용하지 않습니다.&amp;lt;/li&amp;gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">  </span>&amp;lt;/ul&amp;gt;</span></p>
-<p class="p4"><span class="s1">&amp;lt;/section&amp;gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;/</span><span class="s6">pre</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">details</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Log Entry 3 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white shadow sm:rounded-lg border border-gray-200 opacity-80 hover:opacity-100 transition-opacity"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-5"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-bold text-gray-800"</span><span class="s3">&gt;</span><span class="s1">v1.2 콘텐츠 분리 로직 및 톤앤매너 재조정</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm text-gray-500 mt-1"</span><span class="s3">&gt;&lt;</span><span class="s6">i</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"far fa-clock mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s4"> 2026-01-21</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gray-50 rounded-md p-4 mb-4 text-sm text-gray-700 border-l-4 border-gray-400"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">콘텐츠 분리:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 복잡한 설정이나 외부 연동 내용은 별도 문서로 분리하여 추천하도록 로직 추가</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">톤앤매너 수정:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 친근한 어조(~해요)를 배제하고, 정중하고 명확한 어조(~합니다/하세요)로 재변경</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Log Entry 2 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white shadow sm:rounded-lg border border-gray-200 opacity-80 hover:opacity-100 transition-opacity"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-5"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-bold text-gray-800"</span><span class="s3">&gt;</span><span class="s1">v1.1 설정 경로(Path) 시각화 및 여백 조정</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm text-gray-500 mt-1"</span><span class="s3">&gt;&lt;</span><span class="s6">i</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"far fa-clock mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s4"> 2026-01-21</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gray-50 rounded-md p-4 mb-4 text-sm text-gray-700 border-l-4 border-gray-400"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">경로 시각화:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 관리자 페이지 이동 경로(예: 설정 &gt; 메뉴)를 코드 블록/박스 UI로 표현하도록 지침 추가</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">가독성 개선:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 섹션 간 구분선 제거 및 여백 확대 (기존 대비 1.5배)</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Log Entry 1 --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white shadow sm:rounded-lg border border-gray-200 opacity-60 hover:opacity-100 transition-opacity"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"px-6 py-5"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-bold text-gray-800"</span><span class="s3">&gt;</span><span class="s1">v1.0 초기 프롬프트 생성</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm text-gray-500 mt-1"</span><span class="s3">&gt;&lt;</span><span class="s6">i</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"far fa-clock mr-1"</span><span class="s3">&gt;&lt;/</span><span class="s6">i</span><span class="s3">&gt;</span><span class="s4"> 2026-01-21</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gray-50 rounded-md p-4 mb-4 text-sm text-gray-700 border-l-4 border-gray-300"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside space-y-1"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">역할 정의:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 헬프센터 콘텐츠 에디터</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">필수 구조:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 제목, 핵심 요약(콜아웃), 본문(STEP), FAQ 구조 정립</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1">기본 원칙:</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> 팩트 체크, 정확성 유지, 직관성 추가</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <!-- Header -->
+        <div class="mb-10 text-center">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">📄 헬프센터 콘텐츠 변환 대시보드</h1>
+            <p class="text-gray-600">기존 기술 문서를 고객 친화적인 가이드로 재구성한 현황판입니다.<br>
+            <span class="text-xs text-gray-400">*미리보기 아이콘 클릭 시 해당 HTML 파일로 이동합니다.</span></p>
+        </div>
+
+        <!-- Dashboard Table -->
+        <div class="bg-white shadow overflow-hidden sm:rounded-lg mb-16">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-1/4">
+                            기존 문서 (Original)
+                        </th>
+                        <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-1/4">
+                            변환 후 문서 (Converted)
+                        </th>
+                        <th scope="col" class="px-6 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-1/12">
+                            변환 프롬프트
+                        </th>
+                        <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-1/3">
+                            변환 시 고려 사항 (Rationale)
+                        </th>
+                        <th scope="col" class="px-6 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-1/12">
+                            미리보기
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+
+                    <!-- 1. 숨김 리뷰 (v1.3 Re-converted) -->
+                    <tr class="hover:bg-gray-50 transition-colors bg-green-50">
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-medium text-gray-900">[리뷰] 고객이 등록한 리뷰가 안 보여요</div>
+                            <a href="https://help-review.cre.ma/hc/ko/articles/11371979197977" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i> 원문 보기
+                            </a>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-bold text-indigo-700">🕵️ 고객이 작성한 리뷰가 갑자기 안 보여요, 왜 그런가요?</div>
+                            <div class="text-xs text-gray-400 mt-1">review_visibility_guide.html</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">v1.3</span>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li><strong>어조 개선:</strong> 딱딱한 '하십시오' 제거, '하세요' 체 적용</li>
+                                <li><strong>이미지 최적화:</strong> 명확한 경로는 이미지를 생략하여 가독성 증대</li>
+                                <li>'체크포인트' → <strong>'STEP'</strong> 용어 변경</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 align-middle text-center">
+                            <a href="review_visibility_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                <i class="fas fa-file-code fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 2. 네이버페이 연동 (파생) v1.2 -->
+                    <tr class="hover:bg-gray-50 transition-colors bg-blue-50">
+                        <td class="px-6 py-4 align-top">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mb-2">파생 문서</span>
+                            <div class="flex items-start mt-1">
+                                <span class="text-gray-400 mr-1">↳</span>
+                                <div>
+                                    <div class="text-xs text-gray-500">원본: [리뷰] 고객이 등록한 리뷰가 안 보여요</div>
+                                    <a href="https://help-review.cre.ma/hc/ko/articles/11371979197977" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-0.5 inline-block">
+                                        <i class="fas fa-link mr-1"></i>원본 링크
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-bold text-indigo-700">🛍️ 네이버페이 리뷰가 쇼핑몰에 연동될 때 설정 방법 (카페24)</div>
+                            <div class="text-xs text-gray-400 mt-1">naverpay_integration_guide.html</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>복잡한 외부 설정(카페24) 별도 분리</li>
+                                <li>'구매평 노출안함' 해제 과정 상세화</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 align-middle text-center">
+                            <a href="naverpay_integration_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                <i class="fas fa-file-code fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 3. 자동 숨김 기준 (파생) v1.2 -->
+                    <tr class="hover:bg-gray-50 transition-colors bg-blue-50">
+                        <td class="px-6 py-4 align-top">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mb-2">파생 문서</span>
+                            <div class="flex items-start mt-1">
+                                <span class="text-gray-400 mr-1">↳</span>
+                                <div>
+                                    <div class="text-xs text-gray-500">원본: [리뷰] 고객이 등록한 리뷰가 안 보여요</div>
+                                    <a href="https://help-review.cre.ma/hc/ko/articles/11371979197977" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-0.5 inline-block">
+                                        <i class="fas fa-link mr-1"></i>원본 링크
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-bold text-indigo-700">⚙️ 품절, 미진열, 이미지 없는 리뷰 자동 숨김 처리 기준</div>
+                            <div class="text-xs text-gray-400 mt-1">auto_hide_criteria_guide.html</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>'품절/미진열'의 구체적 판단 기준 명시</li>
+                                <li>옵션별 품절 시 노출 여부 등 상세 로직 설명</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 align-middle text-center">
+                            <a href="auto_hide_criteria_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                <i class="fas fa-file-code fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 4. 쇼핑몰 간 연동 v1.2 -->
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-medium text-gray-900">[리뷰] 쇼핑몰간 리뷰 연동에 대해 알고 싶어요</div>
+                            <a href="https://help-review.cre.ma/hc/ko/articles/9873488119833" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i> 원문 보기
+                            </a>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-bold text-indigo-700">🤝 다른 쇼핑몰의 리뷰를 가져와서 보여줄 수 있나요?</div>
+                            <div class="text-xs text-gray-400 mt-1">review_linkage_guide.html</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>비용/조건 등 제약 사항 구조화</li>
+                                <li>심화 내용(매칭)은 추천 문서로 유도</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 align-middle text-center">
+                            <a href="review_linkage_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                <i class="fas fa-file-code fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 5. 알림톡 발송 v1.2 -->
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-medium text-gray-900">[리뷰] 리뷰 작성 유도 메시지를 알림톡으로 발송할 수 있나요?</div>
+                            <a href="https://help-review.cre.ma/hc/ko/articles/9872095799961" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i> 원문 보기
+                            </a>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-bold text-indigo-700">💬 리뷰 작성 요청 메시지를 카카오 알림톡으로 보낼 수 있나요?</div>
+                            <div class="text-xs text-gray-400 mt-1">kakao_alimtalk_guide.html</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>사전 준비(비즈니스 인증) 단계 명확화</li>
+                                <li>무료 건수 소멸 주의사항 강조</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 align-middle text-center">
+                            <a href="kakao_alimtalk_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                <i class="fas fa-file-code fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 6. 상품 간 연동 v1.2 -->
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-medium text-gray-900">[리뷰] 상품간 리뷰 연동 방법 - 상품간 리뷰 연동하기</div>
+                            <a href="https://help-review.cre.ma/hc/ko/articles/13628677804697" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i> 원문 보기
+                            </a>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-bold text-indigo-700">🔗 다른 상품의 리뷰를 함께 보여줄 수 있나요?</div>
+                            <div class="text-xs text-gray-400 mt-1">product_review_linkage.html</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>세트/색상별 상품 등 활용 예시 강화</li>
+                                <li>'리뷰 복사'와 중복 사용 금지 경고</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 align-middle text-center">
+                            <a href="product_review_linkage.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                <i class="fas fa-file-code fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 7. 리뷰 복사 v1.2 -->
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-medium text-gray-900">[리뷰] 리뷰 복사</div>
+                            <a href="https://help-review.cre.ma/hc/ko/articles/13628985874713" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i> 원문 보기
+                            </a>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-bold text-indigo-700">📝 기존 리뷰를 다른 상품으로 그대로 옮길 수 있나요?</div>
+                            <div class="text-xs text-gray-400 mt-1">review_copy_guide.html</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>'리뷰 연동'과 개념 구분 명확화</li>
+                                <li>품절/리뉴얼 등 활용 사례 제시</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 align-middle text-center">
+                            <a href="review_copy_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                <i class="fas fa-file-code fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 8. 데이터 동기화 v1.2 -->
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-medium text-gray-900">[리뷰] 크리마 데이터 동기화 방식</div>
+                            <a href="https://help-review.cre.ma/hc/ko/articles/9876342390553" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i> 원문 보기
+                            </a>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-bold text-indigo-700">🔄 쇼핑몰의 데이터는 언제, 어떻게 크리마로 넘어오나요?</div>
+                            <div class="text-xs text-gray-400 mt-1">data_sync_guide.html</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>데이터 저장소 변경(호스팅사→크리마) 안내</li>
+                                <li>'리뷰 이관' 필요성 인지 유도</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 align-middle text-center">
+                            <a href="data_sync_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                <i class="fas fa-file-code fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 9. 리뷰 이관 (파생) v1.2 -->
+                    <tr class="hover:bg-gray-50 transition-colors bg-blue-50">
+                        <td class="px-6 py-4 align-top">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mb-2">파생 문서</span>
+                            <div class="flex items-start mt-1">
+                                <span class="text-gray-400 mr-1">↳</span>
+                                <div>
+                                    <div class="text-xs text-gray-500">원본: [리뷰] 크리마 데이터 동기화 방식</div>
+                                    <a href="https://help-review.cre.ma/hc/ko/articles/9876342390553" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-0.5 inline-block">
+                                        <i class="fas fa-link mr-1"></i>원본 링크
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-bold text-indigo-700">📦 호스팅사로 리뷰 데이터를 이관하고 싶어요</div>
+                            <div class="text-xs text-gray-400 mt-1">review_migration_guide.html</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>서비스 해지/이전 시 데이터 처리 방법 안내</li>
+                                <li>비용/기간 등 사전 확인사항 정리</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 align-middle text-center">
+                            <a href="review_migration_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                <i class="fas fa-file-code fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 10. 네이버페이 리뷰 가져오기 v1.2 -->
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-medium text-gray-900">[리뷰] 네이버페이 리뷰를 크리마로 가지고 올 수 있나요?</div>
+                            <a href="https://help-review.cre.ma/hc/ko/articles/16403186695833" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i> 원문 보기
+                            </a>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-bold text-indigo-700">🛒 네이버페이에서 작성된 리뷰를 크리마로 가져올 수 있나요?</div>
+                            <div class="text-xs text-gray-400 mt-1">naverpay_review_import.html</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>'간접 연동' 원리 도식화 및 설명</li>
+                                <li>필수 설정(구매평 연동) 체크 유도</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 align-middle text-center">
+                            <a href="naverpay_review_import.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                <i class="fas fa-file-code fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- 11. 네이버쇼핑 개수 연동 v1.2 -->
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-medium text-gray-900">[리뷰] 크리마 리뷰와 네이버쇼핑 리뷰의 개수를 맞춰줄 수 있나요?</div>
+                            <a href="https://help-review.cre.ma/hc/ko/articles/13475627368729" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-1 inline-flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i> 원문 보기
+                            </a>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <div class="text-sm font-bold text-indigo-700">📊 크리마 리뷰와 네이버쇼핑의 리뷰 개수가 서로 달라요</div>
+                            <div class="text-xs text-gray-400 mt-1">naver_shopping_sync_cafe24.html</div>
+                        </td>
+                        <td class="px-6 py-4 align-top text-center">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
+                        </td>
+                        <td class="px-6 py-4 align-top">
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>자동 연동 중단 및 '리뷰 이관' 대안 제시</li>
+                                <li>신청 문구 템플릿 제공</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 align-middle text-center">
+                            <a href="naver_shopping_sync_cafe24.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors">
+                                <i class="fas fa-file-code fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Prompt Update Log Section -->
+        <div class="border-t border-gray-200 pt-10">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">📝 프롬프트 업데이트 로그</h2>
+            <div class="space-y-6">
+
+                <!-- Log Entry 4 (v1.3 Latest) -->
+                <div class="bg-white shadow sm:rounded-lg border border-gray-200 border-l-4 border-l-blue-600">
+                    <div class="px-6 py-5">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-blue-800">v1.3 이미지/링크 정책 및 어조 개선</h3>
+                                <p class="text-sm text-gray-500 mt-1"><i class="far fa-clock mr-1"></i> 2026-01-21 (최신)</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 rounded-md p-4 mb-4 text-sm text-gray-700">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li><strong>이미지 최소화:</strong> 경로 안내가 명확하면 이미지 생략 가능</li>
+                                <li><strong>어조 개선:</strong> "~십시오" 금지, "~요/~입니다" 사용 허용</li>
+                                <li><strong>링크 유지:</strong> 원본 신청서 링크 및 문구 그대로 유지</li>
+                            </ul>
+                        </div>
+                        <details class="group">
+                            <summary class="flex items-center cursor-pointer text-sm font-medium text-gray-600 hover:text-blue-600 select-none">
+                                <span class="group-open:hidden"><i class="fas fa-chevron-right mr-2"></i>수정된 프롬프트 코드 보기</span>
+                                <span class="hidden group-open:inline"><i class="fas fa-chevron-down mr-2"></i>프롬프트 접기</span>
+                            </summary>
+                            <div class="mt-4 bg-gray-900 rounded-md p-4 overflow-x-auto">
+                                <pre class="text-xs text-green-400 font-mono whitespace-pre-wrap">
+&lt;!-- 이미지 정책 --&gt;
+&lt;li&gt;&lt;strong&gt;이미지 생성 가이드 (New):&lt;/strong&gt; 기능 설정 경로가 명확하다면 이미지를 생략할 수 있습니다. 단, 이해를 돕기 위해 꼭 필요하다고 판단되는 경우에만 이미지 영역과 설명을 추가합니다.&lt;/li&gt;
+
+&lt;!-- 링크 정책 --&gt;
+&lt;li&gt;&lt;strong&gt;신청서 링크 (New):&lt;/strong&gt; 원본 문서에 포함된 신청서 문구와 링크는 변경 없이 그대로 삽입합니다.&lt;/li&gt;
+
+&lt;!-- 톤앤매너 --&gt;
+&lt;section id="tone-and-manner"&gt;
+  &lt;h2&gt;[작성 예시 톤앤매너]&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;"~입니다/합니다" 또는 "~세요/요" 체를 사용하여 전문적이면서도 자연스럽게 작성합니다.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;금지 표현:&lt;/strong&gt; 딱딱한 "~십시오" 체는 사용하지 않습니다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+                                </pre>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Log Entry 3 -->
+                <div class="bg-white shadow sm:rounded-lg border border-gray-200 opacity-80 hover:opacity-100 transition-opacity">
+                    <div class="px-6 py-5">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800">v1.2 콘텐츠 분리 로직 및 톤앤매너 재조정</h3>
+                                <p class="text-sm text-gray-500 mt-1"><i class="far fa-clock mr-1"></i> 2026-01-21</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-md p-4 mb-4 text-sm text-gray-700 border-l-4 border-gray-400">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li><strong>콘텐츠 분리:</strong> 복잡한 설정이나 외부 연동 내용은 별도 문서로 분리하여 추천하도록 로직 추가</li>
+                                <li><strong>톤앤매너 수정:</strong> 친근한 어조(~해요)를 배제하고, 정중하고 명확한 어조(~합니다/하세요)로 재변경</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Log Entry 2 -->
+                <div class="bg-white shadow sm:rounded-lg border border-gray-200 opacity-80 hover:opacity-100 transition-opacity">
+                    <div class="px-6 py-5">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800">v1.1 설정 경로(Path) 시각화 및 여백 조정</h3>
+                                <p class="text-sm text-gray-500 mt-1"><i class="far fa-clock mr-1"></i> 2026-01-21</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-md p-4 mb-4 text-sm text-gray-700 border-l-4 border-gray-400">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li><strong>경로 시각화:</strong> 관리자 페이지 이동 경로(예: 설정 > 메뉴)를 코드 블록/박스 UI로 표현하도록 지침 추가</li>
+                                <li><strong>가독성 개선:</strong> 섹션 간 구분선 제거 및 여백 확대 (기존 대비 1.5배)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Log Entry 1 -->
+                <div class="bg-white shadow sm:rounded-lg border border-gray-200 opacity-60 hover:opacity-100 transition-opacity">
+                    <div class="px-6 py-5">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800">v1.0 초기 프롬프트 생성</h3>
+                                <p class="text-sm text-gray-500 mt-1"><i class="far fa-clock mr-1"></i> 2026-01-21</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-md p-4 mb-4 text-sm text-gray-700 border-l-4 border-gray-300">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li><strong>역할 정의:</strong> 헬프센터 콘텐츠 에디터</li>
+                                <li><strong>필수 구조:</strong> 제목, 핵심 요약(콜아웃), 본문(STEP), FAQ 구조 정립</li>
+                                <li><strong>기본 원칙:</strong> 팩트 체크, 정확성 유지, 직관성 추가</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
