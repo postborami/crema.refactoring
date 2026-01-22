@@ -40,33 +40,33 @@
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-gray-100">
                     <tr>
-                        <!-- 1. 기존 문서 제목 -->
-                        <th scope="col" class="px-4 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-[18%]">
-                            기존 문서 제목
+                        <!-- 1. 기존 문서 -->
+                        <th scope="col" class="px-4 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-[15%]">
+                            기존 문서
                         </th>
-                        <!-- 2. 기존 문서 링크 -->
+                        <!-- 2. 기존 문서 보기 -->
                         <th scope="col" class="px-2 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-[6%]">
-                            원문
+                            기존 문서 보기
                         </th>
-                        <!-- 3. 변환 후 문서 제목 -->
-                        <th scope="col" class="px-4 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-[18%]">
-                            변환 후 문서 제목
+                        <!-- 3. 변환 문서 -->
+                        <th scope="col" class="px-4 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-[15%]">
+                            변환 문서
                         </th>
-                        <!-- 4. 변환 후 문서 링크 -->
+                        <!-- 4. 변환 문서 보기 -->
                         <th scope="col" class="px-2 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-[6%]">
-                            보기
+                            변환 문서 보기
                         </th>
-                        <!-- 5. 비교하기 (New) -->
+                        <!-- 5. 비교하기 -->
                         <th scope="col" class="px-2 py-4 text-center text-xs font-bold text-indigo-600 uppercase tracking-wider w-[8%]">
                             비교하기
                         </th>
-                        <!-- 6. 변환 프롬프트 버전 -->
+                        <!-- 6. 프롬프트 -->
                         <th scope="col" class="px-2 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-[8%]">
                             프롬프트
                         </th>
                         <!-- 7. 변환 시 고려사항 -->
-                        <th scope="col" class="px-4 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-[36%]">
-                            변환 시 고려 사항 (Rationale)
+                        <th scope="col" class="px-4 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-[42%]">
+                            변환 시 고려사항 (Rationale)
                         </th>
                     </tr>
                 </thead>
@@ -497,6 +497,30 @@
                                 <li><strong>링크 유지:</strong> 원본 신청서 링크 및 문구 그대로 유지</li>
                             </ul>
                         </div>
+                        <details class="group">
+                            <summary class="flex items-center cursor-pointer text-sm font-medium text-gray-600 hover:text-blue-600 select-none">
+                                <span class="group-open:hidden"><i class="fas fa-chevron-right mr-2"></i>수정된 프롬프트 코드 보기</span>
+                                <span class="hidden group-open:inline"><i class="fas fa-chevron-down mr-2"></i>프롬프트 접기</span>
+                            </summary>
+                            <div class="mt-4 bg-gray-900 rounded-md p-4 overflow-x-auto">
+                                <pre class="text-xs text-green-400 font-mono whitespace-pre-wrap">
+&lt;!-- 이미지 정책 --&gt;
+&lt;li&gt;&lt;strong&gt;이미지 생성 가이드 (New):&lt;/strong&gt; 기능 설정 경로가 명확하다면 이미지를 생략할 수 있습니다. 단, 이해를 돕기 위해 꼭 필요하다고 판단되는 경우에만 이미지 영역과 설명을 추가합니다.&lt;/li&gt;
+
+&lt;!-- 링크 정책 --&gt;
+&lt;li&gt;&lt;strong&gt;신청서 링크 (New):&lt;/strong&gt; 원본 문서에 포함된 신청서 문구와 링크는 변경 없이 그대로 삽입합니다.&lt;/li&gt;
+
+&lt;!-- 톤앤매너 --&gt;
+&lt;section id="tone-and-manner"&gt;
+  &lt;h2&gt;[작성 예시 톤앤매너]&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;"~입니다/합니다" 또는 "~세요/요" 체를 사용하여 전문적이면서도 자연스럽게 작성합니다.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;금지 표현:&lt;/strong&gt; 딱딱한 "~십시오" 체는 사용하지 않습니다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+                                </pre>
+                            </div>
+                        </details>
                     </div>
                 </div>
 
@@ -583,10 +607,12 @@
                     </a>
                 </div>
                 <div class="flex-1 relative">
-                    <iframe id="originalFrame" class="absolute inset-0 w-full h-full" frameborder="0"></iframe>
+                    <iframe id="originalFrame" class="absolute inset-0 w-full h-full bg-white" frameborder="0"></iframe>
                     <!-- Fallback message in case iframe is blocked -->
-                    <div class="absolute inset-0 flex items-center justify-center -z-10 text-gray-400 text-center p-8">
-                        <p>웹사이트 보안 정책으로 인해<br>미리보기가 차단될 수 있습니다.<br>상단 '새 탭에서 열기'를 이용해 주세요.</p>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center -z-10 text-gray-500 text-center p-8 pointer-events-none">
+                        <i class="fas fa-exclamation-circle text-4xl mb-4 text-gray-300"></i>
+                        <p class="font-medium">웹사이트 보안 정책으로 인해<br>미리보기가 차단될 수 있습니다.</p>
+                        <p class="text-sm mt-2 text-gray-400">상단 '새 탭에서 열기'를 이용해 주세요.</p>
                     </div>
                 </div>
             </div>
@@ -598,7 +624,12 @@
                     <span id="convertedTitle" class="text-xs text-indigo-600 truncate max-w-xs"></span>
                 </div>
                 <div class="flex-1 relative">
-                    <iframe id="convertedFrame" class="absolute inset-0 w-full h-full" frameborder="0"></iframe>
+                    <iframe id="convertedFrame" class="absolute inset-0 w-full h-full bg-white" frameborder="0"></iframe>
+                    <!-- Fallback for converted doc -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center -z-10 text-gray-500 text-center p-8 pointer-events-none">
+                        <i class="fas fa-file-code text-4xl mb-4 text-gray-300"></i>
+                        <p class="font-medium">변환된 문서 파일이<br>같은 폴더에 있어야 합니다.</p>
+                    </div>
                 </div>
             </div>
         </div>
