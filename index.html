@@ -11,11 +11,24 @@
         body { font-family: 'Noto Sans KR', sans-serif; }
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
+        
+        /* Modal Styles */
+        #compareModal {
+            transition: opacity 0.3s ease;
+        }
+        #compareModal.hidden {
+            pointer-events: none;
+            opacity: 0;
+        }
+        #compareModal:not(.hidden) {
+            pointer-events: auto;
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <!-- Header -->
         <div class="mb-10 text-center">
             <h1 class="text-3xl font-bold text-gray-900 mb-2">📄 헬프센터 콘텐츠 대시보드</h1>
@@ -28,26 +41,30 @@
                 <thead class="bg-gray-100">
                     <tr>
                         <!-- 1. 기존 문서 제목 -->
-                        <th scope="col" class="px-4 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-[20%]">
+                        <th scope="col" class="px-4 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-[18%]">
                             기존 문서 제목
                         </th>
                         <!-- 2. 기존 문서 링크 -->
-                        <th scope="col" class="px-2 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-[8%]">
-                            원문보기
+                        <th scope="col" class="px-2 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-[6%]">
+                            원문
                         </th>
-                        <!-- 3. 변환 후 문서 타이틀 -->
-                        <th scope="col" class="px-4 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-[20%]">
+                        <!-- 3. 변환 후 문서 제목 -->
+                        <th scope="col" class="px-4 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-[18%]">
                             변환 후 문서 제목
                         </th>
                         <!-- 4. 변환 후 문서 링크 -->
-                        <th scope="col" class="px-2 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-[8%]">
-                            미리보기
+                        <th scope="col" class="px-2 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-[6%]">
+                            보기
                         </th>
-                        <!-- 5. 변환 프롬프트 버전 -->
-                        <th scope="col" class="px-2 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-[8%]">
-                            변환 프롬프트
+                        <!-- 5. 비교하기 (New) -->
+                        <th scope="col" class="px-2 py-4 text-center text-xs font-bold text-indigo-600 uppercase tracking-wider w-[8%]">
+                            비교하기
                         </th>
-                        <!-- 6. 변환 시 고려사항 -->
+                        <!-- 6. 변환 프롬프트 버전 -->
+                        <th scope="col" class="px-2 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-[8%]">
+                            프롬프트
+                        </th>
+                        <!-- 7. 변환 시 고려사항 -->
                         <th scope="col" class="px-4 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-[36%]">
                             변환 시 고려 사항 (Rationale)
                         </th>
@@ -70,9 +87,16 @@
                             <div class="text-xs text-gray-400 mt-1">review_visibility_guide.html</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <a href="https://gemini.google.com/share/83d1cde60702" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
+                            <a href="review_visibility_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
                                 <i class="fas fa-file-code fa-lg"></i>
                             </a>
+                        </td>
+                        <!-- 비교하기 버튼 -->
+                        <td class="px-2 py-4 align-middle text-center">
+                            <button onclick="openCompareModal('[리뷰] 고객이 등록한 리뷰가 안 보여요', 'https://help-review.cre.ma/hc/ko/articles/11371979197977', '🕵️ 고객이 작성한 리뷰가 갑자기 안 보여요', 'review_visibility_guide.html')" 
+                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+                                <i class="fas fa-columns mr-1"></i> 비교
+                            </button>
                         </td>
                         <td class="px-2 py-4 align-top text-center">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">v1.3</span>
@@ -90,25 +114,27 @@
                     <tr class="hover:bg-gray-50 transition-colors bg-blue-50">
                         <td class="px-4 py-4 align-top">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mb-2">파생 문서</span>
-                            <div class="flex items-start mt-1">
-                                <span class="text-gray-400 mr-1">↳</span>
-                                <div>
-                                    <div class="text-xs text-gray-500">원본: [리뷰] 고객이 등록한 리뷰가 안 보여요</div>
-                                    <a href="https://help-review.cre.ma/hc/ko/articles/11371979197977" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-0.5 inline-block">
-                                        <i class="fas fa-link mr-1"></i>원본 링크
-                                    </a>
-                                </div>
-                            </div>
+                            <div class="text-xs text-gray-500">원본: [리뷰] 고객이 등록한 리뷰가 안 보여요</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <span class="text-gray-400">-</span>
+                            <a href="https://help-review.cre.ma/hc/ko/articles/11371979197977" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors" title="원문 보기">
+                                <i class="fas fa-external-link-alt fa-lg"></i>
+                            </a>
                         </td>
                         <td class="px-4 py-4 align-top">
                             <div class="text-sm font-bold text-indigo-700">🛍️ 네이버페이 리뷰가 쇼핑몰에 연동될 때 설정 방법 (카페24)</div>
                             <div class="text-xs text-gray-400 mt-1">naverpay_integration_guide.html</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <span class="text-gray-400">-</span>
+                            <a href="naverpay_integration_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
+                                <i class="fas fa-file-code fa-lg"></i>
+                            </a>
+                        </td>
+                        <td class="px-2 py-4 align-middle text-center">
+                            <button onclick="openCompareModal('[리뷰] 고객이 등록한 리뷰가 안 보여요', 'https://help-review.cre.ma/hc/ko/articles/11371979197977', '🛍️ 네이버페이 리뷰 연동 설정 (카페24)', 'naverpay_integration_guide.html')"
+                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none transition-colors">
+                                <i class="fas fa-columns mr-1"></i> 비교
+                            </button>
                         </td>
                         <td class="px-2 py-4 align-top text-center">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
@@ -125,25 +151,27 @@
                     <tr class="hover:bg-gray-50 transition-colors bg-blue-50">
                         <td class="px-4 py-4 align-top">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mb-2">파생 문서</span>
-                            <div class="flex items-start mt-1">
-                                <span class="text-gray-400 mr-1">↳</span>
-                                <div>
-                                    <div class="text-xs text-gray-500">원본: [리뷰] 고객이 등록한 리뷰가 안 보여요</div>
-                                    <a href="https://help-review.cre.ma/hc/ko/articles/11371979197977" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-0.5 inline-block">
-                                        <i class="fas fa-link mr-1"></i>원본 링크
-                                    </a>
-                                </div>
-                            </div>
+                            <div class="text-xs text-gray-500">원본: [리뷰] 고객이 등록한 리뷰가 안 보여요</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <span class="text-gray-400">-</span>
+                            <a href="https://help-review.cre.ma/hc/ko/articles/11371979197977" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors" title="원문 보기">
+                                <i class="fas fa-external-link-alt fa-lg"></i>
+                            </a>
                         </td>
                         <td class="px-4 py-4 align-top">
                             <div class="text-sm font-bold text-indigo-700">⚙️ 품절, 미진열, 이미지 없는 리뷰 자동 숨김 처리 기준</div>
                             <div class="text-xs text-gray-400 mt-1">auto_hide_criteria_guide.html</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <span class="text-gray-400">-</span>
+                            <a href="auto_hide_criteria_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
+                                <i class="fas fa-file-code fa-lg"></i>
+                            </a>
+                        </td>
+                        <td class="px-2 py-4 align-middle text-center">
+                            <button onclick="openCompareModal('[리뷰] 고객이 등록한 리뷰가 안 보여요', 'https://help-review.cre.ma/hc/ko/articles/11371979197977', '⚙️ 자동 숨김 처리 기준', 'auto_hide_criteria_guide.html')"
+                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none transition-colors">
+                                <i class="fas fa-columns mr-1"></i> 비교
+                            </button>
                         </td>
                         <td class="px-2 py-4 align-top text-center">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
@@ -171,9 +199,15 @@
                             <div class="text-xs text-gray-400 mt-1">review_linkage_guide.html</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <a href="https://gemini.google.com/share/ab60f4c58839" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
+                            <a href="review_linkage_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
                                 <i class="fas fa-file-code fa-lg"></i>
                             </a>
+                        </td>
+                        <td class="px-2 py-4 align-middle text-center">
+                            <button onclick="openCompareModal('[리뷰] 쇼핑몰간 리뷰 연동', 'https://help-review.cre.ma/hc/ko/articles/9873488119833', '🤝 쇼핑몰 간 리뷰 연동 가이드', 'review_linkage_guide.html')"
+                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none transition-colors">
+                                <i class="fas fa-columns mr-1"></i> 비교
+                            </button>
                         </td>
                         <td class="px-2 py-4 align-top text-center">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
@@ -201,9 +235,15 @@
                             <div class="text-xs text-gray-400 mt-1">kakao_alimtalk_guide.html</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <a href="https://gemini.google.com/share/4bd40cdacfba" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
+                            <a href="kakao_alimtalk_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
                                 <i class="fas fa-file-code fa-lg"></i>
                             </a>
+                        </td>
+                        <td class="px-2 py-4 align-middle text-center">
+                            <button onclick="openCompareModal('[리뷰] 알림톡 발송', 'https://help-review.cre.ma/hc/ko/articles/9872095799961', '💬 알림톡 발송 가이드', 'kakao_alimtalk_guide.html')"
+                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none transition-colors">
+                                <i class="fas fa-columns mr-1"></i> 비교
+                            </button>
                         </td>
                         <td class="px-2 py-4 align-top text-center">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
@@ -231,9 +271,15 @@
                             <div class="text-xs text-gray-400 mt-1">product_review_linkage.html</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <a href="https://gemini.google.com/share/97b5ccbeeea5" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
+                            <a href="product_review_linkage.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
                                 <i class="fas fa-file-code fa-lg"></i>
                             </a>
+                        </td>
+                        <td class="px-2 py-4 align-middle text-center">
+                            <button onclick="openCompareModal('[리뷰] 상품간 리뷰 연동', 'https://help-review.cre.ma/hc/ko/articles/13628677804697', '🔗 상품 간 리뷰 연동 가이드', 'product_review_linkage.html')"
+                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none transition-colors">
+                                <i class="fas fa-columns mr-1"></i> 비교
+                            </button>
                         </td>
                         <td class="px-2 py-4 align-top text-center">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
@@ -261,9 +307,15 @@
                             <div class="text-xs text-gray-400 mt-1">review_copy_guide.html</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <a href="https://gemini.google.com/share/fbaffd2c004c" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
+                            <a href="review_copy_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
                                 <i class="fas fa-file-code fa-lg"></i>
                             </a>
+                        </td>
+                        <td class="px-2 py-4 align-middle text-center">
+                            <button onclick="openCompareModal('[리뷰] 리뷰 복사', 'https://help-review.cre.ma/hc/ko/articles/13628985874713', '📝 리뷰 복사 가이드', 'review_copy_guide.html')"
+                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none transition-colors">
+                                <i class="fas fa-columns mr-1"></i> 비교
+                            </button>
                         </td>
                         <td class="px-2 py-4 align-top text-center">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
@@ -291,9 +343,15 @@
                             <div class="text-xs text-gray-400 mt-1">data_sync_guide.html</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <a href="https://gemini.google.com/share/774deb26daf8" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
+                            <a href="data_sync_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
                                 <i class="fas fa-file-code fa-lg"></i>
                             </a>
+                        </td>
+                        <td class="px-2 py-4 align-middle text-center">
+                            <button onclick="openCompareModal('[리뷰] 데이터 동기화 방식', 'https://help-review.cre.ma/hc/ko/articles/9876342390553', '🔄 데이터 동기화 가이드', 'data_sync_guide.html')"
+                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none transition-colors">
+                                <i class="fas fa-columns mr-1"></i> 비교
+                            </button>
                         </td>
                         <td class="px-2 py-4 align-top text-center">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
@@ -310,25 +368,27 @@
                     <tr class="hover:bg-gray-50 transition-colors bg-blue-50">
                         <td class="px-4 py-4 align-top">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 mb-2">파생 문서</span>
-                            <div class="flex items-start mt-1">
-                                <span class="text-gray-400 mr-1">↳</span>
-                                <div>
-                                    <div class="text-xs text-gray-500">원본: [리뷰] 크리마 데이터 동기화 방식</div>
-                                    <a href="https://help-review.cre.ma/hc/ko/articles/9876342390553" target="_blank" class="text-xs text-blue-600 hover:text-blue-800 mt-0.5 inline-block">
-                                        <i class="fas fa-link mr-1"></i>원본 링크
-                                    </a>
-                                </div>
-                            </div>
+                            <div class="text-xs text-gray-500">원본: [리뷰] 크리마 데이터 동기화 방식</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <span class="text-gray-400">-</span>
+                            <a href="https://help-review.cre.ma/hc/ko/articles/9876342390553" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors" title="원문 보기">
+                                <i class="fas fa-external-link-alt fa-lg"></i>
+                            </a>
                         </td>
                         <td class="px-4 py-4 align-top">
                             <div class="text-sm font-bold text-indigo-700">📦 호스팅사로 리뷰 데이터를 이관하고 싶어요</div>
                             <div class="text-xs text-gray-400 mt-1">review_migration_guide.html</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <span class="text-gray-400">-</span>
+                            <a href="review_migration_guide.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
+                                <i class="fas fa-file-code fa-lg"></i>
+                            </a>
+                        </td>
+                        <td class="px-2 py-4 align-middle text-center">
+                            <button onclick="openCompareModal('[리뷰] 데이터 동기화 방식', 'https://help-review.cre.ma/hc/ko/articles/9876342390553', '📦 리뷰 데이터 이관 가이드', 'review_migration_guide.html')"
+                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none transition-colors">
+                                <i class="fas fa-columns mr-1"></i> 비교
+                            </button>
                         </td>
                         <td class="px-2 py-4 align-top text-center">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
@@ -356,9 +416,15 @@
                             <div class="text-xs text-gray-400 mt-1">naverpay_review_import.html</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <a href="https://gemini.google.com/share/865634e50f92" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
+                            <a href="naverpay_review_import.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
                                 <i class="fas fa-file-code fa-lg"></i>
                             </a>
+                        </td>
+                        <td class="px-2 py-4 align-middle text-center">
+                            <button onclick="openCompareModal('[리뷰] 네이버페이 리뷰 가져오기', 'https://help-review.cre.ma/hc/ko/articles/16403186695833', '🛒 네이버페이 리뷰 연동 가이드', 'naverpay_review_import.html')"
+                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none transition-colors">
+                                <i class="fas fa-columns mr-1"></i> 비교
+                            </button>
                         </td>
                         <td class="px-2 py-4 align-top text-center">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
@@ -386,9 +452,15 @@
                             <div class="text-xs text-gray-400 mt-1">naver_shopping_sync_cafe24.html</div>
                         </td>
                         <td class="px-2 py-4 align-middle text-center">
-                            <a href="https://gemini.google.com/share/25fb48d108b7" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
+                            <a href="naver_shopping_sync_cafe24.html" target="_blank" class="text-gray-400 hover:text-indigo-600 transition-colors" title="미리보기">
                                 <i class="fas fa-file-code fa-lg"></i>
                             </a>
+                        </td>
+                        <td class="px-2 py-4 align-middle text-center">
+                            <button onclick="openCompareModal('[리뷰] 네이버쇼핑 개수 연동', 'https://help-review.cre.ma/hc/ko/articles/13475627368729', '📊 네이버쇼핑 리뷰 개수 연동 가이드', 'naver_shopping_sync_cafe24.html')"
+                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none transition-colors">
+                                <i class="fas fa-columns mr-1"></i> 비교
+                            </button>
                         </td>
                         <td class="px-2 py-4 align-top text-center">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">v1.2</span>
@@ -425,30 +497,6 @@
                                 <li><strong>링크 유지:</strong> 원본 신청서 링크 및 문구 그대로 유지</li>
                             </ul>
                         </div>
-                        <details class="group">
-                            <summary class="flex items-center cursor-pointer text-sm font-medium text-gray-600 hover:text-blue-600 select-none">
-                                <span class="group-open:hidden"><i class="fas fa-chevron-right mr-2"></i>수정된 프롬프트 코드 보기</span>
-                                <span class="hidden group-open:inline"><i class="fas fa-chevron-down mr-2"></i>프롬프트 접기</span>
-                            </summary>
-                            <div class="mt-4 bg-gray-900 rounded-md p-4 overflow-x-auto">
-                                <pre class="text-xs text-green-400 font-mono whitespace-pre-wrap">
-&lt;!-- 이미지 정책 --&gt;
-&lt;li&gt;&lt;strong&gt;이미지 생성 가이드 (New):&lt;/strong&gt; 기능 설정 경로가 명확하다면 이미지를 생략할 수 있습니다. 단, 이해를 돕기 위해 꼭 필요하다고 판단되는 경우에만 이미지 영역과 설명을 추가합니다.&lt;/li&gt;
-
-&lt;!-- 링크 정책 --&gt;
-&lt;li&gt;&lt;strong&gt;신청서 링크 (New):&lt;/strong&gt; 원본 문서에 포함된 신청서 문구와 링크는 변경 없이 그대로 삽입합니다.&lt;/li&gt;
-
-&lt;!-- 톤앤매너 --&gt;
-&lt;section id="tone-and-manner"&gt;
-  &lt;h2&gt;[작성 예시 톤앤매너]&lt;/h2&gt;
-  &lt;ul&gt;
-    &lt;li&gt;"~입니다/합니다" 또는 "~세요/요" 체를 사용하여 전문적이면서도 자연스럽게 작성합니다.&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;금지 표현:&lt;/strong&gt; 딱딱한 "~십시오" 체는 사용하지 않습니다.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/section&gt;
-                                </pre>
-                            </div>
-                        </details>
                     </div>
                 </div>
 
@@ -511,6 +559,95 @@
         </div>
 
     </div>
+
+    <!-- Compare Modal -->
+    <div id="compareModal" class="fixed inset-0 z-50 overflow-hidden hidden bg-gray-900 bg-opacity-75 flex flex-col">
+        <!-- Modal Header -->
+        <div class="bg-white px-4 py-3 border-b border-gray-200 flex justify-between items-center shadow-md shrink-0">
+            <h3 class="text-lg leading-6 font-bold text-gray-900 flex items-center">
+                <i class="fas fa-columns text-indigo-600 mr-2"></i> 콘텐츠 비교 모드
+            </h3>
+            <button onclick="closeCompareModal()" class="text-gray-400 hover:text-gray-500 focus:outline-none">
+                <i class="fas fa-times fa-2x"></i>
+            </button>
+        </div>
+
+        <!-- Modal Body (Split View) -->
+        <div class="flex-1 flex overflow-hidden">
+            <!-- Left Pane: Original -->
+            <div class="w-1/2 flex flex-col border-r border-gray-300 bg-gray-50">
+                <div class="px-4 py-2 bg-gray-200 border-b border-gray-300 flex justify-between items-center">
+                    <span class="font-bold text-gray-700 text-sm">원본 문서 (Original)</span>
+                    <a id="originalLink" href="#" target="_blank" class="text-xs text-blue-600 hover:underline">
+                        새 탭에서 열기 <i class="fas fa-external-link-alt ml-1"></i>
+                    </a>
+                </div>
+                <div class="flex-1 relative">
+                    <iframe id="originalFrame" class="absolute inset-0 w-full h-full" frameborder="0"></iframe>
+                    <!-- Fallback message in case iframe is blocked -->
+                    <div class="absolute inset-0 flex items-center justify-center -z-10 text-gray-400 text-center p-8">
+                        <p>웹사이트 보안 정책으로 인해<br>미리보기가 차단될 수 있습니다.<br>상단 '새 탭에서 열기'를 이용해 주세요.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Pane: Converted -->
+            <div class="w-1/2 flex flex-col bg-white">
+                <div class="px-4 py-2 bg-indigo-50 border-b border-indigo-200 flex justify-between items-center">
+                    <span class="font-bold text-indigo-800 text-sm">변환된 문서 (Converted)</span>
+                    <span id="convertedTitle" class="text-xs text-indigo-600 truncate max-w-xs"></span>
+                </div>
+                <div class="flex-1 relative">
+                    <iframe id="convertedFrame" class="absolute inset-0 w-full h-full" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCompareModal(origTitle, origUrl, convTitle, convUrl) {
+            const modal = document.getElementById('compareModal');
+            const originalFrame = document.getElementById('originalFrame');
+            const convertedFrame = document.getElementById('convertedFrame');
+            const originalLink = document.getElementById('originalLink');
+            const convertedTitleSpan = document.getElementById('convertedTitle');
+
+            // Set sources
+            originalFrame.src = origUrl;
+            convertedFrame.src = convUrl;
+            
+            // Set link and title
+            originalLink.href = origUrl;
+            convertedTitleSpan.textContent = convTitle;
+
+            // Show modal
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeCompareModal() {
+            const modal = document.getElementById('compareModal');
+            const originalFrame = document.getElementById('originalFrame');
+            const convertedFrame = document.getElementById('convertedFrame');
+
+            // Hide modal
+            modal.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+
+            // Clear src to stop video/audio or reset state
+            setTimeout(() => {
+                originalFrame.src = '';
+                convertedFrame.src = '';
+            }, 300);
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeCompareModal();
+            }
+        });
+    </script>
 
 </body>
 </html>
